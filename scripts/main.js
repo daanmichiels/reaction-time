@@ -51,6 +51,16 @@ function go() {
         tiles[targetRow][targetCol].classList.remove('active');
         infoMessage.innerHTML = `<p>You scored ${hits - misses} points!<br>Duration: ${duration} seconds.</p><p>Hits: ${hits}<br>Misses: ${misses}</p>`;
         infoWrapper.style.display = 'flex';
+        for (let i=0; i<btns.length; ++i) {
+            let btn = btns[i];
+            btn.disabled = true;
+        }
+        setTimeout(() => {
+            for (let i=0; i<btns.length; ++i) {
+                let btn = btns[i];
+                btn.disabled = false;
+            }
+        }, 1000);
     }
 
     function runGamePhase1() {
