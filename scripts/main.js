@@ -17,6 +17,10 @@ function go() {
         for (let c=0; c<nCols; ++c) {
             let tile = document.createElement('div');
             tile.classList.add('tile');
+            tile.addEventListener('touchstart', (ev) => {
+                ev.preventDefault();
+                handleClick(r, c);
+            });
             tile.addEventListener('click', () => handleClick(r, c));
             row.push(tile);
             grid.appendChild(tile);
