@@ -21,7 +21,11 @@ function go() {
                 ev.preventDefault();
                 handleClick(r, c);
             });
-            tile.addEventListener('click', () => handleClick(r, c));
+            tile.addEventListener('mousedown', (ev) => {
+                ev.preventDefault();
+                handleClick(r, c);
+            });
+            // tile.addEventListener('click', () => handleClick(r, c));
             row.push(tile);
             grid.appendChild(tile);
         }
