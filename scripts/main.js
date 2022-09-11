@@ -73,9 +73,9 @@ function go() {
         console.log('info click');
         duration = dur;
         status = 'getting_ready';
-        setTimeout(() => runGamePhase1(), 3000);
+        setTimeout(() => runGamePhase1(), 2000);
         infoWrapper.style.display = 'none';
-        progressFill.style.transition = `width 3s linear`;
+        progressFill.style.transition = `width 2s linear`;
         progressFill.style.width = '0';
     }
 
